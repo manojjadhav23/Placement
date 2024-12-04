@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac40</title>
+</head>
+<body>
+    <script>
+        const a = [10,20,30];
+        let [i,j,k] = a;  // This is deconstruction of array
+        document.write(`Entire Array: ${a}`,`<br/>`);
+        document.write(`value of i:${i}<br/> value of j:${j}<br/> value of k:${k}<br/>`);
+ 
+        const arr = ['physics','mathematics','chemistry','botany','zoology','geology','psychology','Astronomy'];
+        let [p,q,r] = arr;
+        document.write(`Entire array is: ${arr}<br/>`);
+        document.write(`The value of p:${p}<br/> The value of q: ${q}<br> The value of r: ${r}<br/>`);
+     
+     //
+     //econstructing in another ways
+        let [m,,,,n] = arr;
+     document.write(`The value of m: ${m}<br/> The value of n is ${n}<br>`);
+
+     let [s1,,s2,,...s3] = arr;
+     document.write(`The value of s1 is: ${s1}<br/> The value of s2 is: ${s2}<br> The value of s3 is: ${s3}<br/>`);
+    
+    // Swapping of two numbers using arrays:
+
+    let v1 = 100, v2 = 200;
+    [v1,v2] = [v2,v1];
+    document.write(`The value of v1 is: ${v1}<br> The value of v2 is: ${v2}`);
+    </script>
+</body>
+</html>

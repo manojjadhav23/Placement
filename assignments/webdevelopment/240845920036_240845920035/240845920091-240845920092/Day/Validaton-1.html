@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .error-text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com" onsubmit="return validate()">
+        <input type="text" placeholder="enter name" id="name">
+        <span id="error" class="error-text"></span>
+        <br><br>
+        <input type="password" placeholder="enter password" id="password">
+        <span id="error1" class="error-text"></span>
+        <br><br>
+        <input type="submit" value="login">
+    </form>
+    <script>
+        function validate() {
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("password").value;
+            if (name.length == 0 && password.length == 0) {
+                document.getElementById("error").innerHTML = "name is required";
+                document.getElementById("error1").innerHTML = "password is required";
+                return false;
+            }
+            if (name.length == 0) {
+                document.getElementById("error").innerHTML = "name is required";
+                return false;
+            }
+            if(password.length == 0){
+                document.getElementById("error1").innerHTML = "password is required";
+                return false
+            }
+            return true;
+        }        
+    </script>
+</body>
+
+</html>

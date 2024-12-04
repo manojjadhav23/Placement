@@ -1,0 +1,171 @@
+#include<iostream> 
+   
+using namespace std; 
+class Base1 { 
+ public: 
+     Base1() 
+     { cout << " Base1's constructor called" << endl;  } 
+}; 
+   
+class Base2 { 
+ public: 
+     Base2() 
+     { cout << "Base2's constructor called" << endl;  } 
+}; 
+   
+class Derived: public Base1, public Base2 { 
+   public: 
+     Derived() 
+     {  cout << "Derived's constructor called" << endl;  } 
+}; 
+   
+int main() 
+{ 
+   Derived d; 
+   return 0; 
+} 
+
+output:
+Base1's constructor called
+Base2's constructor called
+Derived's constructor called
+
+
+
+#include <iostream>   
+using namespace std; 
+  
+class Base1 { 
+ public: 
+     ~Base1()  { cout << " Base1's destructor" << endl; } 
+}; 
+    
+class Base2 { 
+ public: 
+     ~Base2()  { cout << " Base2's destructor" << endl; } 
+}; 
+    
+class Derived: public Base1, public Base2 { 
+   public: 
+     ~Derived()  { cout << " Derived's destructor" << endl; } 
+}; 
+    
+int main() 
+{ 
+   Derived d; 
+   return 0; 
+} 
+
+output:
+Derived's destructor
+ Base2's destructor
+ Base1's destructor
+ 
+ 
+ 
+ 
+ #include<iostream> 
+   
+using namespace std; 
+class P { 
+public: 
+   void print()  { cout <<" Inside P"; } 
+}; 
+   
+class Q : public P { 
+public: 
+   void print() { cout <<" Inside Q"; } 
+}; 
+   
+class R: public Q { }; 
+   
+int main(void) 
+{ 
+  R r;  
+  r.print(); 
+  return 0; 
+} 
+
+ouput:
+ Inside Q
+ 
+ 
+ 
+ 
+ 
+ #include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	int len;
+	char* ptr;
+	public:
+		void display();
+		string1(char*);
+		string1& operator=(string1&);
+		string1(string1&)
+		{
+			cout<<"copy constructor is called";
+		}
+};
+string1& string1::operator=(string1& s)
+{
+	cout<<"assignment is called\n";
+	len=s.len;
+	delete[] ptr;
+	ptr=new char[len+1];
+	strcpy(ptr,s.ptr);
+	return (*this);
+}
+void string1::display()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}	
+
+int main()
+{
+	string1 s1("abc");
+	string1 s2("xyz");
+	s2=s1;//s2.operator=(s1)
+	s2.display();
+}
+
+
+
+
+
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+class Car{ 
+  private: 
+    string name; 
+    int cost; 
+    public: 
+        Car(string n, int c){ 
+            name=n; 
+            cost=c; 
+        } 
+        bool operator == ( Car &c){ 
+            if (name == c.name && cost == c.cost) 
+                return true; 
+            return false; 
+        } 
+}; 
+int main(){ 
+    Car car1 ("Santro",500000); 
+    Car car2 ("Safari",1000000); 
+    if (car1 == car2) //car1.operator==(car2)
+        cout<<"Equivalent"<<endl; 
+    else
+        cout<<"Not Equivalent"<<endl; 
+}

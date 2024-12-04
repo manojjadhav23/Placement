@@ -1,0 +1,63 @@
+<!--Examples on variables in javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac8</title>
+</head>
+<body>
+<script>
+a=5;
+function show()
+{
+    console.log("The value of a is:"+a);
+}
+show();
+console.log("The value of a is:"+a);
+</script>    
+
+<script>
+function show1()
+{
+    b=10;
+    console.log("The value of b is:"+b);
+}
+show1();
+console.log("The value of b is:"+b); // This statement should havegiven me error but since b is
+                                      // declared without specifying any type it is "var" by
+                                      // default it "var" has global scope, so it can be accessed
+                                      // anywhere.
+</script>
+
+<script>
+function show2()
+{
+   let c=10;
+    console.log("The value of c is:"+c);
+}
+show2();
+//console.log("The value of c is:"+c);  The commented out line gives me error because "let" has
+                                        // local scope and as soon as it goes out of scope we
+                                        //  we cannot use it.
+
+</script>
+
+<script>
+function show3()
+{
+    var d = 25;
+    console.log("The value of d is"+d);
+}
+//console.log("The value of d is"+d); The commented out line gives me error because "var" in this
+                                      //instance has local scope and as soon as it goes out of scope we
+                                        //  we cannot use it.
+</script>
+<script>
+    // const a;  --> This piece of code gives error because we have not assigned value to a   
+    // a = 10;       along with its declaration.
+
+//   const a = 10; --> This piece of code gives error because are trying to change the value of a
+                       // a constant variable. 
+//   a=20;
+</script>
+</body>
+</html>

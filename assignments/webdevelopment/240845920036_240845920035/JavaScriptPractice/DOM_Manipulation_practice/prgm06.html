@@ -1,0 +1,21 @@
+<!--Difference between inner text and inner HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm06</title>
+</head>
+<body>
+   <div id="div1"></div> 
+   <div id="div2"></div> 
+<script>
+   const div1= document.querySelector("#div1");
+   const div2= document.querySelector("#div2");
+   // Here innerHTML has displayed the text inside the backticks as expected 
+   // because innerHTML method knows the HTML tags and their working.
+   div1.innerHTML=`Mangoes are <strong>&#8377;200</strong> per kilo`;
+   div2.innerText=`Mangoes are <strong>&#8377;200</strong> per kilo`;
+  // Here innerText has displayed the entire string written inside the backticks 
+  // as plain text, because innerText does not understand HTML tags.
+</script>
+</body>
+</html>

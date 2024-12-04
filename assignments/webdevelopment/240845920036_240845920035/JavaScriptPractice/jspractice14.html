@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac14</title>
+</head>
+<body>
+    <script>
+        let x = 5; let y = 6; let z = 7;
+        document.write(x==y,'<br/>');
+        document.write(x===y,'<br/>');
+        document.write(x!=y,'<br/>');
+        document.write(x!==y,'<br/>');
+    // Logical Operators
+    document.write(x>y&&z>x,'<br/>');
+    document.write(x>0||y>x,'<br>');
+    
+    //Concatination Operators
+    document.write(x+"mangoes<br>");
+    document.write(10+true,"<br/>");
+
+    //Increment and decrement operators
+    x++;
+    document.write(x,"<br/>");
+    --y;
+    document.write(y,"<br/>");
+    let res = 10*x++;
+    document.write(res,"<br>");
+    let res2 = 10*--y;
+    document.write(res2,"<br>");
+
+  //Conditional Operators
+document.write(x>y ? "X is greater than Y": "Y is Greater than X");
+    </script>
+</body>
+</html>

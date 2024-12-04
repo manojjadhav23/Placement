@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac38</title>
+</head>
+<body>
+    <script>
+        const a = [10,20,30,40,50,60,70];
+        for(let i in a)
+        {
+            document.write(`${a[i]}`,`&nbsp;`); // This part of the code shows us the use of for-in
+            a[i] = a[i] + 2;        
+            //document.write(`<br/>`)                                 // loop which allows us to use for loop without keeping
+           document.write(`${a[i]}`,`&nbsp;`); // track of the array index. Also the above program shows 
+        }                                  // us that using the same loop we can change the array as well.
+        for (i in a)
+        {
+            document.write(`${a[i]} <br/>`);
+        } 
+    </script> 
+    <script>
+const b = [`red`,`blue`, `cyan`,`magenta`,`Purple`];
+for(let c of b)
+{
+    document.write(`${c}`,`&nbsp;`);
+}
+</script>   
+</body>
+</html>

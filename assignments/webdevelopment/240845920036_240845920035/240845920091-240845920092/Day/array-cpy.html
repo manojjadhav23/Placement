@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const a=[10,20,30];
+	  /*
+	  const b=a;	//array copying
+	  */
+	  const b=[...a];  //arrya copied
+	  document.write(`a	${a}<br>`);
+	  document.write(`b	${b}<br>`);	  
+		a[3]=40;
+		b[3]=44;
+	  document.write(`a	${a}<br>`);
+	  document.write(`b	${b}<br>`);
+
+	  const x=[11,22,33,44,55];
+	  const y=[12,34];
+	  const z=[10,20,30];
+	  const xyz=[...x,...y,...z];  //appending 3 arrays
+	  document.write(`xyz	${xyz}<br>${xyz.length}<br>`);
+	  
+	  const xy=[101,...x,202,...y,303];
+	  document.write(`xy	${xy}<br>`);
+    </script>
+</body>
+</html>

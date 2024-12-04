@@ -1,0 +1,137 @@
+#include <iostream>  
+using namespace std;  
+template<class T, int size>  
+class A   
+{  
+    public:  
+    T arr[size];  
+    void insert()  
+    {  
+        int i =1;  
+        for (int j=0;j<size;j++)  
+        {  
+            arr[j] = i;  
+            i++;  
+        }  
+    }  
+      
+    void display()  
+    {  
+        for(int i=0;i<size;i++)  
+        {  
+            std::cout << arr[i] << " ";  
+        }  
+    }  
+};  
+int main()  
+{  
+    A<int,10> t1;  
+    t1.insert();  
+    t1.display();  
+    return 0;  
+}  
+
+
+
+
+#include <iostream> 
+using namespace std; 
+  int main()  
+{ 
+  int nutr = 5; 
+  int detr = 0; 
+  int rt; 
+    
+  try
+  { 
+    if(detr == 0) 
+    { 
+      throw detr; 
+    } 
+    rt = nutr / detr; 
+  } 
+  catch(int ex) 
+  { 
+    cout << "Exception: Divide by zero not allowed :" <<  
+             ex << endl; 
+  } 
+  cout << "Division Result is: " << rt; 
+    
+  return 0; 
+}
+
+
+
+
+#include <iostream> 
+using namespace std; 
+  int main()  
+{ 
+  try 
+  { 
+    int age = 10; 
+    if (age >= 18)  
+    { 
+      cout << "YES, you are old enough."; 
+    }  
+    else 
+    { 
+      throw (age); 
+    } 
+  } 
+  catch (int num)  
+  { 
+    cout << "No, You must be at least 18 years old" << 
+             endl; 
+    cout << "Age is: " << num;   
+  } 
+  return 0; 
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = -1;
+    cout << "Before try \n";
+    try {
+        cout << "Inside try \n";
+        if (x < 0) {
+            throw x;
+            cout << "After throw\n";
+        }
+    }
+    catch (int x) {
+        cout << "Exception Caught \n";
+    }
+    cout << "After catch \n";
+    return 0;
+}
+
+
+
+
+
+
+#include <iostream> 
+using namespace std; 
+#define MINIMUM(x, y) (x < y) ? x : y 
+int main() 
+{ 
+    cout << "Min (115, 1000):"; 
+    int k = MINIMUM(115, 1000); 
+    cout << k << endl; 
+  
+    cout << "Min (20, 100):"; 
+    int k1 = MINIMUM(20, 100); 
+    cout << k1; 
+  
+    return 0; 
+} 
+
+
+
+

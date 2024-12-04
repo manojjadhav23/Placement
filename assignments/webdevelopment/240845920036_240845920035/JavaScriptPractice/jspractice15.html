@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac15</title>
+</head>
+<body>
+    <script>
+    let x = "9"; let y = "10"; let z = "10";
+    let res = x*y;
+    document.write(res+'<br/>'); // Automatic Parsing takes place. parsing is the process we do to 
+    //convert the integer number enclosed in the double quote ("")
+    // into an integer so the output will be 
+// document.write(+x + +y); ---> This line would have given us the output of adding two string integers
+// i.e,"9" and "10" because here we have done manual parsing.If we had written x+y and
+// after that on the next line document.write(res+'<br/>') the answer would be 910,which is 
+//incorrect because control instead of parsing is concatinating the strings. This anamoly
+// is there only for concatination operation performed on string integers.
+    document.write(x-y,'<br/>'); //document.write(x-y +'<br>') would have given the same result but here automatic
+                         // parsing is taking place so we don't have to write the "+" sign.
+    document.write(--x,'<br/>');
+    document.write(x++,'<br>');
+    //Manual Parsing
+let a = window.parseInt(x)+ window.parseInt(y);
+document.write(a +'<br/>');
+document.write(+x + +y,'<br/>');
+let str="ram";
+document.write(parseInt(str) + '<br>');
+document.write(+str + '<br/>');
+document.write(str*10);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--Demo on interpolation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac32</title>
+</head>
+<body>
+<script>
+    let n = "ram";
+    document.write(n+"<br>");
+    document.write(`${n}<br>`);
+
+    document.write("sum is 10+20<br>");
+    document.write(`sum is ${10+20}<br>`);
+    document.write(`result is${15>9}<br/>`);
+    document.write(`${alert('hello')}`);
+
+    let ptr = `hello ${n}`;
+    document.write(`${ptr}<br/>`);
+
+    let x = 25 , y = 9 ,res;
+    res=`Sum is ${x+y}<br>
+        product is ${x*y}<br/>
+        Modulus is ${x%y}<br>`;
+    document.write(res); 
+
+    n = 10;
+    for(let i=1; i<n ; i++)
+{
+    document.write(`${n}*${i}=${n*i}<br/>`);
+
+}
+</script>
+</body>
+</html>

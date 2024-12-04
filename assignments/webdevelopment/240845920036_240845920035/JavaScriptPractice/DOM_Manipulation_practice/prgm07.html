@@ -1,0 +1,23 @@
+<!--Element Proerties Data manipulation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm07</title>
+</head>
+<body>
+<h1>Hi</h1>
+<button onclick="change()">Update</button>
+<button onclick="document.querySelector(`h1`).innerText=``">Delete</button> <br/>
+<hr>
+<script>
+    function change()
+    {
+       const h = document.querySelector(`h1`);
+       // Here we have created a prompt that will urge the user to enter his/her name
+       // and we have made an object of it and stored its value in h.
+       let name = prompt("Enter Name");
+       h.innerText=`Hi ${name}`;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+#include <iostream> 
+using namespace std; 
+class Swap {
+    int num;
+   
+public: 
+    Swap(int num) 
+    { 
+        this->num = num; 
+    } 
+    friend void swap(Swap&, Swap&); 
+}; 
+void swap(Swap& s1, Swap& s2) 
+{ 
+    int temp;
+    cout << "\nBefore Swapping: " << s1.num << " " << s2.num; 
+    temp = s1.num; 
+    s1.num = s2.num; 
+    s2.num = temp; 
+    cout << "\nAfter Swapping: " << s1.num << " " << s2.num; 
+} 
+int main() 
+{ 
+    Swap s1(6), s2(10); 
+    swap(s1,s2); 
+    return 0; 
+} 
+
+
+
+#include <iostream>
+using namespace std;
+ 
+// first name space
+namespace first_space
+{
+  void func()
+  {
+     cout << "Inside first_space" << endl;
+  }
+  // second name space
+  namespace second_space
+  {
+     void func()
+     {
+        cout << "Inside second_space" << endl;
+     }
+  }
+}
+using namespace first_space::second_space;
+int main ()
+{
+    // This calls function from second name space.
+      func();
+   
+      return 0;
+}
+
+Output
+Inside second_space
+
+
+ #include <iostream>
+using namespace std;
+ 
+// Variable created inside namespace
+namespace first {
+int val = 500;
+}
+ // Global variable
+int val = 100;
+ int main()
+{
+    // Local variable
+    int val = 200;
+ 
+    // These variables can be accessed from outside the namespace using the scope
+    // operator ::
+    cout << first::val << '\n';
+ 
+    return 0;
+}
+
+Output
+500
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+ 
+namespace ns
+{
+    // A Class in a namespace
+    class geek
+    {
+    public:
+        void display()
+        {
+            cout<<"ns::geek::display()"<<endl;;
+        }
+    };
+}
+ 
+int main()
+{
+    // Creating Object of geek Class
+    ns::geek obj;
+ 
+    obj.display();
+ 
+    return 0;
+}
+
+Output
+ns::geek::display()
+
+
+
+
+
+#include <iostream>
+using namespace std;
+ 
+namespace ns {
+// Only declaring class here
+class geek;
+} // namespace ns
+ 
+// Defining class outside
+class ns::geek {
+public:
+    void display() { cout << "ns::geek::display()\n"; }
+};
+ 
+int main()
+{
+    // Creating Object of geek Class
+    ns::geek obj;
+    obj.display();
+    return 0;
+}
+
+Output
+ns::geek::display()
+
+
+
+#include <iostream>
+using namespace std;
+ 
+// Creating a namespace
+namespace ns {
+void display();
+class geek {
+public:
+    void display();
+};
+} // namespace ns
+ 
+// Defining methods of namespace
+void ns::geek::display()
+{
+    cout << "ns::geek::display()\n";
+}
+void ns::display() { cout << "ns::display()\n"; }
+ 
+// Driver code
+int main()
+{
+    ns::geek obj;
+    ns::display();
+    obj.display();
+    return 0;
+}
+Output:
+
+ns::display()
+ns::geek::display():

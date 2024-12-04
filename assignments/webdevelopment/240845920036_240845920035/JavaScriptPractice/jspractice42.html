@@ -1,0 +1,51 @@
+<!--Array Methods
+1) includes() method
+2) indexof() method
+3) lastindexof() method
+4) sort() method
+5) reverse() method
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac42</title>
+</head>
+<body>
+  <script>
+ const arr = [10,20,30,40,50,60,70];
+ // Example of includes() function
+ document.write(`Presence of 30 in the string is: ${arr.includes(30)}<br/>`);
+ document.write(`Presence of 100 in the string is: ${arr.includes(100)}<br/>`);
+  let str = "Nikhil and Jayprakash"
+  document.write(`Presence of Ni in the string is: ${str.includes("Ni")}<br/>`);
+  document.write(`Presence of ha in the string is: ${str.includes("ha")}<br/>`);
+ // Array declarartion and checking the presence of an element or string in one line
+  document.write(`${[10,20,30,40,50].includes(22)}<br/>`);
+  document.write(`${("Nikhil And Jayprakash").includes("Ni")}<br/>`);
+
+ // indexof() method
+ document.write(`The index of 30 in array arr is: ${arr.indexOf(30)}<br/>`);
+ // Check the occurance of a element in an array starting from some fixed index
+ document.write(`${arr.indexOf(30,3)}<br/>`); // if the element is not found it returns -1
+
+// lastindexof() method
+document.write(`The last index of 30 in array arr is: ${arr.lastIndexOf(30)}<br/>`);
+document.write(`The last index of a in array arr is: ${str.lastIndexOf('a')}<br/>`);
+
+//reverse() method
+arr.reverse();
+document.write(`The reversed array is: ${arr}<br/>`);
+
+//sort() method
+arr.sort();
+document.write(`The sorted array is: ${arr}<br/>`);
+// Sorting of array of strings
+const names = ["Nikhil","Jayprakash","Manoj","Abhijeet"];
+names.sort();
+document.write(`${names}<br/>`);
+
+// Join() method
+document.write(`The joined integer list is: ${arr.join('&#8377;')}<br/>`);
+</script>  
+</body>
+</html>

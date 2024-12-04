@@ -1,0 +1,25 @@
+<!--Changing styles using DOM manipulation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm10</title>
+</head>
+<body> 
+      <div align="center">
+    <h1 align="center" id="head1">Shiv Khanna</h1>
+      <input type="radio" name="rad" id="rd1"> <label>Red</label> &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="rad" id="rd2"> <label>Green</label> &nbsp; &nbsp; &nbsp; 
+      <input type="radio" name="rad" id="rd3"> <label>Blue</label>
+        <hr>
+    </div> 
+    <script>
+        document.querySelector(`#rd1`).onchange=()=>{head1.style.color="red";}
+        document.querySelector(`#rd2`).onchange=()=>{head1.style.color="green";}
+        document.querySelector(`#rd3`).onchange=()=>{head1.style.color="blue";}
+    </script>
+    <input type="color" name="col" id="c1">
+    <script>
+        document.querySelector(`#c1`).onchange=()=>{document.body.style.background=c1.value}
+    </script>
+    </body>
+</html>

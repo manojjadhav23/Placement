@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .error-text {
+            color: grr;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://www.google.com" onsubmit="return validate()">
+        <input type="text" placeholder="enter name" id="name" onkeyup="validateName()">
+        <span id="error" class="error-text"></span>
+        <br><br>
+        <input type="password" placeholder="enter password" id="password" onkeyup="validatePassword()">
+        <span id="error1" class="error-text"></span>
+        <br><br>
+        <input type="submit" value="login">
+    </form>
+    <script>
+        function validate() {
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("password").value;
+            let valid = true;
+
+            if (name.length === 0) {
+                document.getElementById("error").innerHTML = "name is required";
+                valid = false;
+            } else {
+                document.getElementById("error").innerHTML = "";
+            }
+
+            if (password.length === 0) {
+                document.getElementById("error1").innerHTML = "password is required";
+                valid = false;
+            } else {
+                document.getElementById("error1").innerHTML = "";
+            }
+
+            return valid;
+        }
+
+        function validateName() {
+            const name = document.getElementById("name").value;
+            if (name.length === 0) {
+                document.getElementById("error").innerHTML = "name is required";
+            } else {
+                document.getElementById("error").innerHTML = "";
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            if (password.length === 0) {
+                document.getElementById("error1").innerHTML = "password is required";
+            } else {
+                document.getElementById("error1").innerHTML = "";
+            }
+        }    
+    </script>
+</body>
+
+</html>

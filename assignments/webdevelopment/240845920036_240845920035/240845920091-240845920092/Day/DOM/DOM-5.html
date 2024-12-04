@@ -1,0 +1,33 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+ </head>
+ <body>
+	<h3>demo on element object properties (changing html settings)</h3>
+	<img src="https://th.bing.com/th?id=OIP.k-XpRF0EIqlEln1_STXlOAHaE8&w=306&h=204&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.3&pid=3.1&rm=2">
+	<br>
+	<input type="text" id="una" size="50">
+	<br>
+	<script>
+		//changing img settings
+		const img = document.querySelector("img");
+		document.write(`${img.src}<br>`);	 //or img.getAttribute("src");
+		img.title="some random flower";	
+			//or  img.setAttribute("title", "some random flower");
+
+		//changing input settings
+	  const una = document.querySelector("#una");
+	  document.write(`${una.type}<br>`);	//or		una.getAttribute("type");
+	  una.placeholder="enter name";	
+							//or    una.settAttribute("placeholder", "enter unsername");
+	  //una.maxLength=10;	//or    
+	  una.setAttribute("size",100);
+
+	 
+	</script>
+ </body>
+</html>

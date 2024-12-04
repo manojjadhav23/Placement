@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm18</title>
+</head>
+<body>
+    <h1 id="Myh1">Welcome</h1>
+    <input type="button" value="get content" onclick="getValue()"> <br>
+    <script>
+        function getValue()
+        {
+            var v = document.getElementById("Myh1");
+            console.log(v); // reading the content from the page <h1 id = "Myh1">Welcome </h1> is printed on the console
+            console.log(v.innerHTML); //Printing the data inside the tag "Welcome" is printed on the console
+        }      //Inner HTML knows the HTML tags so it prints Welcome. 
+    </script>
+</body>
+</html>

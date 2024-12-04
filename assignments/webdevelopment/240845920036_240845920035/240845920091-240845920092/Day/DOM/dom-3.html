@@ -1,0 +1,23 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+ </head>
+ <body>
+	<h3>demo on element object properties (data manipulation)</h3>
+	<div id="div1"><h1>1</h1> </div>
+	<div id="div2"> <h1>2</h1></div>
+    <button id="ds" onclick="onfun()">enter</button>
+	<script>
+		function onfun()
+        {const div1 = document.querySelector("#div1");
+		const div2 = document.querySelector("#div2");
+		//difference b/w innerText & innerHTML
+		div1.innerText="mangos 1kg <strong>&#8377;200</strong>";
+		div2.innerHTML="mangos 1kg <strong>&#8377;200</strong>";}
+	</script>
+ </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>jspac18</title>
+</head>
+<body>
+<div align="center">
+<h3> Simple Calculator</h3>
+<input type="text" id="firstnum" placeholder="Enter First Number"> <br>
+<input type="text" id="secnum" placeholder="Enter Second Number"> <br>
+<button onclick="addition()">+</button>
+<button onclick="subtraction()">-</button>
+<button onclick="multiplication()">*</button>
+<button onclick="division()">/</button> <br>
+<input type="text" name="output" id="op" placeholder="Output" readonly>
+<script>
+ let x,y;
+ var res;
+function addition()
+ {
+    x = window.parseInt(firstnum.value);
+    y = window.parseInt(secnum.value);
+  res = x+y;
+    //document.write("The sum is:", +res);
+    document.getElementById('op').value = res;
+ }
+ function subtraction()
+{ 
+    x = window.parseInt(firstnum.value);
+    y = window.parseInt(secnum.value);
+    res = x-y;
+    //document.write("The subtraction is is:",res); 
+    document.getElementById('op').value = res;
+ } 
+ function multiplication()
+ { 
+    x = window.parseInt(firstnum.value);
+    y = window.parseInt(secnum.value);
+    res = x*y;
+    //document.write("The multiplication is is:",res); 
+    document.getElementById('op').value = res;
+ } 
+ function division()
+ {  
+    x = window.parseInt(firstnum.value);
+    y = window.parseInt(secnum.value);
+    res = x/y;
+    //document.write("The division is:",res);
+    document.getElementById('op').value = res;
+ }
+</script>
+</div>
+</body>
+</html>

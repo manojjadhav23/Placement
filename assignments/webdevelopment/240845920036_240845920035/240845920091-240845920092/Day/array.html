@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <script>
+        const a = [10,15,20,25,30];
+        const c = [...a];
+        document.write(`Array of c is ${c}&nbsp`)
+        document.write(`Array is ${a}<br>`);
+        a[2] = "23";
+
+        document.write(`Array is ${a}<br>`)
+        document.write(`Size of Array is ${a.length}<br>`)
+        /*let a = new Array();  //array declaration
+        document.write(`${a.length}<br>`);
+        document.write(`${a}<br>`);
+        a[0]=10;
+        a[1]=20;
+        a[3]=30;
+        document.write(`${a.length}<br>`);
+        document.write(`${a}<br>`);*/
+	  
+	  //array init
+	let names = new Array('rama','sama','gama','bhama','poma');
+	    document.write(`${names}<br>`);
+    const colors=['red','cyan','black','blue'];
+
+		for(let x of names)
+            document.write(`${x}<br>`)
+
+
+        for(let c  of  colors)
+          document.write(`${c}<br>`);
+      
+
+      const b = [[1,2,35],[4,5,60],[7,8,9]];
+      for(let i=0; i<b.length;i++){
+        for(let j = 0; j<b[i].length; j++){
+            document.write(`${b[i][j]}&nbsp`);
+        }
+        document.write(`<br>`);
+      }
+      document.write(`<br>`);
+      document.write(`<br>`);
+      document.write(`<br>`);
+
+    for (let row of b) {
+        for (let item of row) {
+            document.write(`${item}&nbsp;`);
+        }
+        document.write(`<br>`);
+    }
+    for(let d of c)
+        document.write(`${d}, `)
+
+
+    </script>
+</body>
+</html>

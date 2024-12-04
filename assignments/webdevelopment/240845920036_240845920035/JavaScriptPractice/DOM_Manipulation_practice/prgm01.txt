@@ -1,0 +1,46 @@
+The JavaScript code you provided interacts with various document object properties in the HTML page. These properties allow access to different parts of the HTML document, enabling manipulation and retrieval of information dynamically. Here's a breakdown of the document properties and their significance:
+
+document.title:
+
+Represents the title of the current HTML document (the text that appears on the browser tab).
+Before change: The code first displays the current title of the page using document.write.
+After change: The title is changed to "title changed" using document.title = 'title changed';, then displayed again to show the updated value.
+document.URL:
+
+This property returns the full URL of the current web page.
+It is used to display the page's URL. The result will be the current URL where the webpage is hosted or viewed from (e.g., http://example.com/prgm01.html).
+document.head:
+
+Refers to the <head> section of the HTML document, which contains metadata, links to stylesheets, scripts, and the title tag.
+The code displays the entire content of the <head> section by writing document.head. This will output the HTML content inside the <head> tag.
+document.body:
+
+Refers to the <body> section of the HTML document, which contains all the visible content of the web page (text, images, links, etc.).
+The code first stores the body in the b constant and displays it. Then it displays the body again using document.body.
+document.images:
+
+This property provides a collection (array) of all <img> elements (images) in the HTML document.
+The code outputs this collection. If no images are present, the output will be an empty array.
+document.links:
+
+This property returns a collection of all <a> (anchor) elements that have an href attribute (hyperlinks) on the page.
+The code displays the array of links. Like images, if there are no links, an empty collection will be shown.
+document.forms:
+
+Refers to the collection of all <form> elements in the document.
+The code is intended to display all the forms on the page. However, there is a typo in the code: documents.write should be document.write. This causes an error, and the forms won’t be displayed until this is corrected.
+Summary of Key Document Properties:
+document.title: Accesses or changes the document’s title.
+document.URL: Retrieves the URL of the current page.
+document.head: Provides access to the <head> section.
+document.body: Provides access to the <body> section.
+document.images: Returns all images on the page.
+document.links: Returns all hyperlinks on the page.
+document.forms: Returns all forms on the page (with the typo fixed).
+These properties are part of the Document Object Model (DOM), allowing scripts to interact with and modify the structure and content of the web page dynamically.
+
+
+
+
+
+

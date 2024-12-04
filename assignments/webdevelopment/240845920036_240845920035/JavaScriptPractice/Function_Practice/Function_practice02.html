@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>funcprac2</title>
+<script src="func2.js"></script>
+</head>
+<body>
+    <script>
+        let res = sum(10,20); 
+        // Printing the definition of sum() function
+        document.write(`Function definition of sum() function: ${sum}<br/>`)
+        // Printing the actual sum of two numbers
+        document.write(`The sum of two numbers is: ${res}<br/>`);
+      //Printing the exponential of a number
+      document.write(`The value of 4 raised to 4 is: ${power(4,4)}<br/>`);
+     
+     // Callback Function 
+      const arr = [10,20,30,40,50];   // Here the forEach() method is internally calling 
+      arr.forEach( (f)=>{             // an anonymous function which is an arrow function(function that has no name)
+        document.write(`${f}<br/>`)  // and its definition is provided directly, and it  
+      });                            // takes one argument f which iterates  over the array elements.
+
+    </script>
+</body>
+</html> 
+
+// The above callback function can also be written as follows
+const arr[10,20,30,40,50];
+arr.forEach( f => document.write(`${f}<br/>`));

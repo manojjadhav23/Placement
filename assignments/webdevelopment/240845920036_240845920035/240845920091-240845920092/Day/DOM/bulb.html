@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #bulb {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="bulb" src="images\pic_bulboff.gif" alt="bulb off">
+    <br>
+    <input type="button" id="a1" onclick="onbutton()" value="TURN ON" style="padding: 5px; margin-top: 15px;">
+
+    <script>
+        let bt = "OFF";
+
+        function onbutton() {
+            const bulbImage = document.getElementById("bulb");
+            const button = document.getElementById("a1");
+            // document.body.style.backgroundColor= "hsl(0, 0%, 15%)";
+
+            if (bt === "OFF") {
+                bulbImage.src = "images/pic_bulbon.gif"; // Path to the "on" image
+                button.value = "TURN OFF";
+                bt = "ON";
+                document.body.style.backgroundColor= "hsl(0, 0%, 100%)";
+
+            } else {
+                bulbImage.src = "images/pic_bulboff.gif"; // Path to the "off" image
+                button.value = "TURN ON";
+                bt = "OFF";
+                document.body.style.backgroundColor= "hsl(0, 0%, 0%)";
+            }
+        }
+    </script>
+</body>
+</html>

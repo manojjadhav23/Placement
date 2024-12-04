@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="grade.css">
+    <script src="grade.js"></script>
+</head>
+<body>
+    <div class="object" allign="center">
+        <h1>Result Details</h1>
+        <h3>Name:</h3>
+        <input type="text" id="name" placeholder="Enter Your Name">
+
+        <h3>HTML:</h3>
+        <input type="number" id="htmlMarks" min="0" placeholder="Enter Your HTML Marks">
+
+        <h3>CSS:</h3>
+        <input type="number" id="cssMarks" min="0" placeholder="Enter Your CSS Marks">
+
+        <h3>JS:</h3>
+        <input type="number" id="jsMarks" min="0" placeholder="Enter Your JS Marks">
+        <br>
+
+        <button onclick="getResult()">SUBMIT</button>
+        <input type="reset" id="clear">
+    </div>
+    
+    <div class="a123" >
+        <h3>Results Summary</h3>
+        <div align="left" style="margin-top: 30px;">
+        <output id="total"></output><br>
+        <output id="average"></output><br>
+        <output id="grade"></output><br>
+        </div>
+    </div>
+</body>
+</html>

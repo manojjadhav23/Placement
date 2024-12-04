@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+
+    <h1 id ="a1">welcome to <span>HERE</span></h1>
+    <input type="button" value="get content" onclick="getCONTENT()">
+    <script>
+        function getCONTENT(){
+            var a = document.getElementById("a1");
+            console.log(a);
+            document.write(a.innerText)
+            console.log("-----")
+            console.log(a.innerHTML)
+            console.log("-----")
+            console.log(a.innerText)
+            console.log("-----")
+
+            // a.innerHTML = "<h1>WELCOME <i><b>TO</b></i> THERE</h1>"
+            console.log("-----")
+
+            a.innerText = "<h1>WELCOME <i><b>TO</b></i> THERE</h1>"
+        }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,259 @@
+// 1)Find out maximum element in an array
+
+#include<iostream>
+using namespace std;
+void max(int *arr1)
+{
+    int max_val =arr1[0];
+    for(int j=0;j<5;j++)
+    {
+        if(arr1[j]>max_val)
+            max_val=arr1[j];
+    }
+    cout<<"Maximum number is "<<max_val;
+}
+int main()
+{
+    int arr[5];
+    cout<<"Enter values of array"<<endl;
+    for(int i=0;i<5;i++)
+    {
+        cin>>arr[i];
+    }
+    max(arr);
+}
+
+
+// 2)Calculate average of all element of an array using pointer
+
+#include<iostream>
+using namespace std;
+void max(int *arr1)
+{
+    int sum =arr1[0];
+    for(int j=0;j<5;j++)
+    {
+        sum=sum+arr1[j];
+    }
+    int avg=sum/5;
+    cout<<"Average number is "<<avg;
+}
+int main()
+{
+    int arr[5];
+    cout<<"Enter values of array"<<endl;
+    for(int i=0;i<5;i++)
+    {
+        cin>>arr[i];
+    }
+    max(arr);
+}
+
+
+// 3)Copy elements of one array into another array using pointer
+
+#include<iostream>
+using namespace std;
+void copyarr(int *arr, int *arr1)
+{
+    
+    for(int j=0;j<5;j++)
+    {
+        *(arr1 +j)=*(arr +j);
+    }
+   
+}
+void printarr(int *arr3)
+{
+	for(int j=0;j<5;j++)
+    {
+        cout<<arr3[j]<<" ";
+    }
+    cout<<endl;
+}
+int main()
+{
+    int arr[5];
+    int arr1[5];
+    cout<<"Enter values of array"<<endl;
+    for(int i=0;i<5;i++)
+    {
+        cin>>arr[i];
+    }
+    copyarr(arr,arr1);
+    cout << "Original array: ";
+    printarr(arr);
+    cout << "Duplicated array: ";
+    printarr(arr1);
+}
+
+
+//4)Add of 2 matrix
+
+#include <iostream> 
+using namespace std; 
+void add(int arr3[3][3],int arr4[3][3])
+{
+	for (int i = 0; i <=2 ; i++) { 
+        for (int j = 0; j<=2; j++) { 
+            cout<<arr3[i][j]+arr4[i][j]<<" ";
+        } 
+    } 
+}
+int main() 
+{ 
+    int arr1[3][3]; 
+    int arr2[3][3];
+  	cout<<"Enter values of 1st 2D array :"<<endl;
+    for (int i = 0; i <=2 ; i++) { 
+        for (int j = 0; j<=2; j++) { 
+            cin>>arr1[i][j];
+        } 
+    } 
+    
+    cout<<"Enter values of 2nd 2D array :"<<endl;
+    for (int i = 0; i <=2 ; i++) { 
+        for (int j = 0; j<=2; j++) { 
+            cin>>arr2[i][j];
+        } 
+    } 
+    add(arr1,arr2);
+  
+     return 0; 
+}
+
+
+//5) transpose of matrix
+
+#include<iostream>
+using namespace std;
+
+void printArray(int arr[3][3])
+{
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+void transpose(int arr[3][3])
+{
+    int transposed[3][3];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            transposed[i][j] = arr[j][i];
+        }
+    }
+    cout << "Transposed array:" << endl;
+    printArray(transposed);
+}
+
+int main()
+{
+    int arr[3][3];
+    cout << "Enter values of 1st 2D array:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+        }
+    }
+
+    cout << "Original array:" << endl;
+    printArray(arr);
+
+    transpose(arr);
+
+    return 0;
+}
+
+
+
+//6)Square of matrix element
+
+#include<iostream>
+using namespace std;
+
+void printArray(int arr[3][3])
+{
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+void square(int arr[3][3])
+{
+    int sq[3][3];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            sq[i][j] = arr[i][j]*arr[i][j];
+        }
+    }
+    cout << "Squared array:" << endl;
+    printArray(sq);
+}
+
+int main()
+{
+    int arr[3][3];
+    cout << "Enter values of 1st 2D array:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+        }
+    }
+
+    cout << "Original array:" << endl;
+    printArray(arr);
+
+    square(arr);
+
+    return 0;
+}
+
+
+//7) store data of 10 books in array of object
+
+#include<iostream>
+using namespace std;
+
+class Book {
+    char id;
+    float weight;
+
+  public:
+    void getData() {
+      cout << "Enter book character id: ";
+      cin >> id;
+      cout << "Enter weight: ";
+      cin >> weight;
+    }
+
+    void displayData() {
+      cout << "Book character id: " << id << endl;
+      cout << "Weight: " << weight << " kg" << endl;
+    }
+};
+
+int main() {
+  Book books[10];
+  int i;
+
+  cout << "Enter data for 10 books:" << endl;
+  for(i = 0; i < 10; i++) {
+    cout << "Book " << (i+1) << ":" << endl;
+    books[i].getData();
+  }
+
+  cout << "Books Data:" << endl;
+  for(i = 0; i < 10; i++) {
+    cout << "Book " << (i + 1) << ":" << endl;
+    books[i].displayData();
+  }
+
+  return 0;
+}

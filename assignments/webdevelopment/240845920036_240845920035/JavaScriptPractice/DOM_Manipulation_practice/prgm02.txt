@@ -1,0 +1,30 @@
+The JavaScript code within the <script> tag is using two document methods to access elements in the HTML page: getElementById and getElementsByName. Here's a detailed explanation of what is happening in the script:
+
+1. document.getElementById("heading"):
+The method getElementById is used to select an element by its unique id attribute.
+In this case, document.getElementById("heading") selects the <h2> element with the id of "heading", which contains the text "Hello World".
+This element is stored in the variable bob.
+The script then writes the element's reference (the entire <h2> tag and its content) to the document using document.write. The output will be something like:
+
+[object HTMLHeadingElement]
+This represents the object reference for the h2 element, indicating that the element is successfully retrieved.
+2. document.getElementsByName("radio"):
+The method getElementsByName retrieves all elements that have the same name attribute. In this case, it selects all the radio buttons with the name attribute "radio".
+The three radio buttons (<input type="radio" id="rd1">, <input type="radio" id="rd2">, <input type="radio" id="rd3">) all share the same name="radio".
+This collection of radio buttons (an array-like object called an HTMLCollection) is stored in the variable rob.
+The script writes the HTMLCollection to the document using document.write. The output will be something like:
+
+[object NodeList]
+This represents the collection of radio buttons, indicating that the radio inputs are successfully retrieved as a group of nodes.
+Summary:
+document.getElementById("heading"): Retrieves the <h2> element with the ID heading. It accesses a specific element by its unique identifier.
+document.getElementsByName("radio"): Retrieves all radio button elements with the name="radio". It returns a collection of elements that share the same name attribute.
+The use of document.write simply displays the object references for the retrieved elements, but it doesn't print their actual content or properties directly. For more meaningful output, you could access and display specific attributes or properties of these elements (like their innerHTML or value). 
+
+Explaination of the <hr> tag.
+
+The <hr> tag in HTML is used to insert a horizontal rule (a horizontal line) that visually separates content on a webpage. It is a self-closing tag, meaning it doesn’t need a closing tag (though you can also write it as <hr /> in XHTML or stricter HTML documents). The <hr> element is typically used to create a thematic break between sections of content.
+
+In your code:
+The <hr> tag appears after the three radio buttons and before the <script> tag.
+It will render a horizontal line across the page, separating the radio buttons from the content that is displayed by the JavaScript code (which uses document.write).

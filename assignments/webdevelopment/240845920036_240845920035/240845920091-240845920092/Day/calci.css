@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #202124; /* Dark background */
+    color: #e8eaed; /* Light text color */
+}
+
+table {
+    border-collapse: collapse;
+    width: 250px; /* Adjusted width */
+    border-radius: 15px; /* Round corners for the table */
+    overflow: hidden; /* Ensures corners are rounded */
+}
+
+th, td {
+    border: 1px solid #a0a0a0; /* Dark border */
+    text-align: center;
+    padding: 20px; /* Increased padding */
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-family: cursive;
+    background-color: #3c4043; /* Button background */
+    color: #e8eaed; /* Button text color */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; /* Round corners for buttons */
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #424242; /* Hover effect */
+}
+
+th {
+    background-color: #3c4043; /* Header background */
+}
+
+th:last-child button {
+    background-color: darkslategrey; /* Equal button color */
+    color: rgb(88, 170, 170); /* Text color for equal button */
+}
+
+#display {
+    margin-top: 20px;
+    text-align: right;
+    width: 250px;
+    font-size: 20px;
+    background-color: #303134; /* Input background */
+    color: #e8eaed; /* Input text color */
+    border: 1px solid #3c4043; /* Input border */
+    border-radius: 10px; /* Round corners for input */
+    padding: 10px;
+}

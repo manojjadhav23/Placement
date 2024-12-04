@@ -1,0 +1,54 @@
+<!---Element Properties -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm05</title>
+</head>
+<body>
+    <h1 id="heading">Hello</h1> 
+    <input type="text" name="txt" id="txt1" value="1000">
+
+    <hr>
+
+    <script>
+        let num = document.getElementById("heading");
+        //printing the text in the heading element
+        document.write(`${num.innerText}<br/>`);
+        //The foolowing statement gives the same result as the above text. 
+        //document.write(`${num.innerHTML}<br/>`);
+       
+        // Changing the text in the heading element 
+         num.innerText=`Hi this is awesome`;
+         document.write(`${num.innerText}<br/>`);
+         
+         //Adding new words to the already existing words(Apending)
+          num.innerText+=`Sparta`;
+          document.write(`${num.innerText}<br/>`);
+
+           //Deletion of the text
+           num.innerText=``;
+           document.write(`${num.innerText}<br/>`);
+
+//Updating, deleting and appending value in the textbox
+
+// Both the methods queryselector and getElementById gives the same result
+//Here we have use the .value to retrive the value from the textbox because
+//input tag is a bodyless tag, So we cannot use .innerHTML or .innerText method 
+//because they support only body-full tags or paired tags.
+let sam=document.querySelector("#txt1");
+    document.write(`${sam.value}<br/>`);
+
+// let sam=document.getElementById("txt1");
+//      document.write(`${sam.value}<br/>`);
+
+sam.value=`20`;
+document.write(`${sam.value}<br/>`);
+
+sam.value+=`Prabhu`;
+document.write(`${sam.value}<br/>`);
+
+sam.value=``;
+document.write(`${sam.value}<br/>`);
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blurred Background Example</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            background-image: url("C:/Users/IET/Desktop/WPD/IMAGE/wolf.png");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bg-text {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            /*padding: 0 0 10px 0;*/
+        }
+
+        nav ul li.active a {
+            border-bottom: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div>
+        <a href="#" style="color: white; font-size: 24px;">NEWS HOMEPAGE</a>
+    </div>
+    <ul>
+        <li class="active"><a href="C:/Users/IET/Desktop/WPD/Day/2.html">Page 1</a></li>
+        <li class="active"><a href="C:/Users/IET/Desktop/WPD/Day/bag.html">Page 2</a></li>
+    </ul>
+</nav>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+    <h2>Blurred Background</h2>
+    <h1 style="font-size:50px">I am Sherlock Homes</h1>
+    <p>And I'm a Photographer</p>
+</div>
+
+</body>
+</html>

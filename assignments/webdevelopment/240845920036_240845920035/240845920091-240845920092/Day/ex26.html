@@ -1,0 +1,51 @@
+<!-- CSS Selectors
+direct child selector
+=> used to define/to apply same styles for child elements and grand child elements  so on..
+	Syn:	p-tag > c-tag {
+					prop:value;
+					.......
+				}
+				gp-tag > p-tag > c-tag {
+					prop:value;
+					.......
+				}
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+  <head>
+   <meta charset="UTF-8">
+   <title>Ex63</title>
+   <link rel="icon" href="logo.png">
+     <style>
+         div > a{
+             color:red;
+             text-decoration:none;
+         }		
+         ul > li > a{
+             color:green;
+         } 	
+     </style>
+  </head>
+  <body> 
+     <h2>demo on  direct child selectors</h2>
+     <a href="ex1.html">goto ex1</a> <Br>
+     <a href="ex2.html">goto ex2</a> <br>
+     <div>
+         <a href="ex11.html">goto ex11</a> <br>
+         <a href="ex12.html">goto ex12</a> <br>
+         <p>
+             <a href="ex21.html">goto ex21</a> 
+         </p>
+     </div>
+ 
+     <ul>
+         <li>
+             <a href="https://www.google.com">google</a>
+         </li>
+         <li>
+             <a href="https://www.facebook.com">facebook</a>
+         </li>
+             <a href="https://www.youtube.com">youtube</a>
+     </ul>	 
+  </body>
+ </html>

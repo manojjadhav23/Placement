@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jspractice17</title>
+</head>
+<body>
+<label>Enter First Number:</label>
+<input type="text" id="firstnum"> <br>
+<label>Enter Second Number</label>
+<input type="text" id="secnum"> <br>
+<button onclick="addition()">Click Here to check Sum</button>
+<br>
+<output id="op"></output>
+<script>
+function addition()
+{
+    let x,y,sum;
+    x = firstnum.value;
+    y = secnum.value;
+    sum = x*y;
+    //document.write("Sum is"+sum);
+    op.value="Sum is " +sum;
+}
+
+</script> 
+</body>
+</html>

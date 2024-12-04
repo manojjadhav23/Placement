@@ -1,0 +1,22 @@
+.converter {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}

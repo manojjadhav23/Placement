@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <title>jsprac31</title>
+    <label> Select Date of Birth</label> <br>
+    <select id="date">
+        <option>Select Day</option>
+        <script>
+            for (let d = 1; d <= 31; d++) {
+                document.write('<option>' + d + '</option>');
+            }
+        </script>
+    </select>
+    <select id="month">
+        <option>Select Month</option>
+        <script>
+            for (let m = 1; m <= 12; m++) {
+                document.write('<option>' + m + '</option>');
+            }
+        </script>
+    </select>
+    <select id="year">
+        <option>Select Year</option>
+        <script>
+            for (let y = 2024; y >= 1960; y--) {
+                document.write('<option>' + y + '</option>');
+            }
+        </script>
+    </select>
+</body>
+
+</html>

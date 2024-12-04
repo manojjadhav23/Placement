@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm15</title>
+</head>
+<body>
+    <fieldset style="width:500px;">
+     <legend>Marital Status</legend>
+      <input type="radio" id="rd1" name="radio"> <label>Single</label>
+       <input type="radio" id="rd2" name="radio"> <label>Married</label>
+       <input type="radio" id="rd3" name="radio"> <label>Divorced</label>
+       <input type="radio" id="rd4" name="radio"> <label>Widowed</label>
+       <input type="radio" id="rd5" name="radio">  <label>Never Marring</label>
+    </fieldset>
+    <div id="div1">
+      <label>Date of Marriage</label> <br>
+      <input type="date" id="dom">  <br/>
+      <label>Spouse Name</label> <br>
+      <input type="text" id="spname"> <br>
+    </div>
+    <script>
+         let divtag=document.getElementById("div1").style;
+      
+         document.getElementById(`rd1`).onclick=()=>
+         {
+            divtag.visibility='hidden';
+         };
+         document.getElementById(`rd2`).onclick=()=>
+         {
+            divtag.visibility='visible';
+         };
+
+         document.getElementById(`rd3`).onclick=()=>
+         {
+            divtag.visibility='hidden';
+         };
+         document.getElementById(`rd4`).onclick=()=>
+         {
+            divtag.visibility='hidden';
+         }; 
+         document.getElementById(`rd5`).onclick=()=>
+         {
+            divtag.visibility='hidden';
+         };
+    </script>
+</body>
+</html>

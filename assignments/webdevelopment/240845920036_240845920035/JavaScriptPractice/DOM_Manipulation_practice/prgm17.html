@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm17</title>
+<style>
+    img{
+        width: 250px;
+        height: 250px;
+        margin-right: 40px;
+        border: 2px solid;
+    }
+</style>
+</head>
+<body>
+    <img src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL1.jpg" id="img1">
+    <img src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL2.jpg" id="img2">
+    <img src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL3.jpg" id="img3">
+<script>
+    const im1 = document.images[0]; //images is predefined 
+    const im2 = document.images[1];
+    const im3 = document.images[2]; 
+
+    im1.onmouseover=()=>
+{
+    im1.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL2.jpg"
+};
+im1.onmouseout=()=>
+{
+
+    im1.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL3.jpg"
+}; 
+im2.onmouseover=()=>
+{
+    im2.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL1.jpg"
+};
+im2.onmouseout=()=>
+{
+    im2.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL3.jpg"
+} 
+
+im3.onmouseover=()=>
+{
+    im3.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL1.jpg"
+} 
+im3.onmouseout=()=>
+{
+    im3.src="/home/nikhilj/HTML_Practice/Javascript practice/DOM_Manipulation_practice/BALL2.jpg"
+} 
+im3.onmousedown=()=>
+[
+    
+]
+</script>
+</body>
+</html>

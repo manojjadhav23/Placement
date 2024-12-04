@@ -1,0 +1,141 @@
+#include<iostream>
+using namespace std;
+
+class A{
+	int a;
+	public:
+		A(){
+			cout<<"in default constructor \n";
+		};
+		void display(){
+			cout << "a is displayed"<< endl;
+		}
+		
+};
+class B : public A{
+};
+
+int main (){
+	A a;
+	a.display();
+	B b;
+	b.display();
+}
+
+
+
+#include<iostream>
+using namespace std;
+
+class Parent{
+	protected:
+		int roll_no;
+		
+};
+class Child : public Parent{
+	public:
+		void SetRollNo(int a){
+			roll_no = a;
+			}
+		void display(){
+			cout<<"Roll no is:"<<roll_no<<endl;
+		}
+};
+int main(){
+	Child c;
+	c.SetRollNo(8586);
+	c.display();
+	cout<<"Size of object is "<<sizeof(c);
+}
+
+
+
+
+#include<iostream>
+using namespace std;
+
+class Square{
+	public:
+		int length=0;
+	void output(){
+		
+		cout<<"The Area of Square is : "<<length*length<<endl;
+	}
+};
+int main(){
+	Square sq;
+	cout<<"Enter the length :"<<endl;
+		cin>>sq.length;
+		sq.output();
+	
+}
+
+
+#include<iostream>
+using namespace std;
+
+class Parent{
+	protected:
+		int roll_no;
+		
+};
+class Child : public Parent{
+	public:
+		int b;
+		void SetRollNo(int a){
+			roll_no = a;
+			}
+		void Bset(int k){
+			b = k;
+			}
+		void valBdisplay(){
+			cout<<"value of B is:"<<b<<endl;
+		}
+		void display(){
+			cout<<"Roll no is:"<<roll_no<<endl;
+		}
+};
+int main(){
+	Child c;
+	c.SetRollNo(8);
+	c.display();
+	cout<<"Size of object is "<<sizeof(c);
+	c.Bset(50);
+	c.valBdisplay();
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+	public :
+		int seats;
+		Car(){
+			cout<<"In Default of car Constructor"<<endl;
+			cout<<"Enter Seats for car :\n";
+			cin>>seats;
+		}
+		void display(){
+			cout<<"The Total seats in the car are :"<<seats<<endl;
+		}
+};
+class Bike :public Car{
+	public :
+		int cc;
+		Bike(){
+			cout<<"In Default of Bike Constructor"<<endl;
+			cout<<"Enter CC :\n";
+			cin>>cc;
+		}
+		void display(){
+			cout<<"The CC of bike is :"<<cc<<endl;
+		}
+};
+
+int main(){
+	Bike obj;
+	obj.display();
+	
+}

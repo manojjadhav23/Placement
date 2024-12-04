@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter phone number" id="a1">
+    <input type="button" value="+" onclick="addNumber()">
+    <input type="button" value="-" onclick="deleteNumber()">
+    <div id="container"></div>
+    
+    <script>
+        let count = 1; // Start with one input field
+
+        function addNumber() {
+            if (count < 5) { // Allow up to 5 input fields
+                const input = document.createElement("input");
+                input.setAttribute("type", "text");
+                input.setAttribute("placeholder", "Enter PHONE NUMBER");
+                const containerDiv = document.getElementById("container");
+                containerDiv.appendChild(input);
+                count += 1;
+            } else {
+                alert("You can only add up to 5 numbers.");
+            }
+        }
+
+        function deleteNumber() {
+            const containerDiv = document.getElementById("container");
+            if (count > 1) {
+                const lastInput = containerDiv.lastElementChild; // Get the last input field
+                if (lastInput) {
+                    lastInput.remove(); // Remove the last input field
+                    count -= 1;
+                }
+            } else {
+                alert("You must have at least one number.");
+            }
+        }
+    </script>
+</body>
+</html>

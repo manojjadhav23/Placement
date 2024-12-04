@@ -1,0 +1,20 @@
+<!--Shadowing-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>funcprac6</title>
+</head>
+<body>
+    <script>
+        var n = 10;
+        function show()
+        { 
+            let n = 200;
+            document.write(`The value of n is:`+ n +`<br/>`);
+            document.write(`The value of n*5 is: ${n*5} <br/>`);
+            document.write(`The value of this.n is:`+ this.n +`<br/>`);
+        }    // this.n prints the value of n that has scope ouside the show() function
+        show();
+    </script>
+</body>
+</html>

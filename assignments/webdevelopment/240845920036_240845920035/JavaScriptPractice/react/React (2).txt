@@ -1,0 +1,428 @@
+==>In SPA,we always used to follow  component based architecture.i.e we should break down entire page into various components instead of the webpages.
+==>component:every UI element which is visible on screen is called as components.its a UI element display on screen.
+eg:button,table(row,col),image,video,audio,navbar,footer,login form.
+==>libraries/framework will provide a cli tool to create a new project i.e create-react-app tool.globally it will install.
+======================================================
+with the new version ,we are having a new concept that for using a cli tool its installation is no loner needed.
+that is possible with the help of npx.
+npm install -g npx
+npx create-react-app my-react
+cd my-react
+npm start
+=======================================================================================
+open terminal with folder name
+>>npx create-react-app myapp//create project structure along with folders and file,dependencies
+//when we create a react app using create-react-app cli bydefault it will give a component i.e APP component i.e app.js 
+==>initally whatever the component u will see on screen that will be app component. intially whatever data will be display.that data comes from app.js
+
+==>for every component we will create .js file.
+home.js
+gallery.js
+
+===========================================================================
+after creating project
+1)open project in vs
+2)open terminal
+ npm start
+output will display on localhost:3000 (app component)
+//whatever u will make changes,browser will automatically reload it. dont need of refreshing
+================================================================================
+customise app.js by removing image.
+function App(){
+return(
+<h1>hello</h1>
+);}
+============================
+create own own component using class and function
+
+class Student{
+constructor(){
+console.log("hello");
+}
+}
+var s1=new Student();
+//node classdemo.js
+
+=================================================
+create instance properties
+class Student{
+constructor(){
+this.id=10;
+this.name="rahul";
+}
+}
+var s1=new Student();
+console.log(s1.id,s1.name);
+//node classdemo.js
+
+===============================================================
+class Student{
+constructor(){
+this.id=10;
+this.name="rahul";
+}
+}
+var s1=new Student();
+console.log(s1.id,s1.name);
+var s2=new Student();
+console.log(s2.id,s2.name);//same data
+
+===============================================
+class Student{
+constructor(id,name){
+this.id=id;
+this.name=name;
+}
+}
+var s1=new Student(1,"rahul");
+console.log(s1.id,s1.name);
+var s2=new Student(2,"rohan");
+console.log(s2.id,s2.name);//different data
+
+================================================================
+class Student{
+constructor(id,name){
+this.id=id;
+this.name=name;
+}
+show(){
+console.log(this.id,this.name);
+}
+}
+var s1=new Student(1,"rahul");
+s1.show();
+console.log(s1.id,s1.name);
+var s2=new Student(2,"rohan");
+s2.show();
+console.log(s2.id,s2.name);//different data
+
+==============================================================
+how to create component in reactjs
+
+2 types of component
+1)class based component==>a component for which class will be created
+2)function component==>a component fo which only a function will be created
+light weight component
+
+============================================================
+syntax to create class component
+create home component
+//name of file and name of component should be same
+==>create Home.js file
+import {Component} from "react";
+export class Home extends Component (from react module)
+{
+	//override the function render(), will provide html code for the component
+	render(){
+	return (<div>
+		<h1>welcome to class component</h1>
+		</div>
+);
+}
+}
+
+//inside src create new file Home.js
+//react will create tag internally with the same name as that of our class in order to display it.
+
+import {Home} from './Home';
+function App(){
+return(
+<div>
+<Home></Home>
+</div>
+);
+}
+app component will display this home component
+
+npm start
+================================================================================
+About.js
+
+import {Component} from "react";
+export class About extends Component{
+render(){
+return(
+<h2> welcome to about</h2>
+);
+
+}
+}
+
+
+import {About} from './About';
+function App(){
+return(
+<div>
+<Home></Home>
+<About>/<About>
+</div>
+);
+}
+app component will display this About component
+========================================================
+Function component
+
+syntax:
+function Home(){
+return(
+//html code
+
+);
+}
+=================================
+Contact.js
+
+export function Contact(){
+return (
+<div>
+<h3>phone:</h3><p>+91-9657657392<p>
+</div>
+);
+
+
+}
+
+
+import {Contact} from './Contact';
+function App(){
+return(
+<div>
+<Home/>
+<About/>
+<Contact/>
+</div>
+);
+}
+-========================================================
+NOTE:we can only return a single parent from a component.
+
+return (
+<div>
+<h3>phone:</h3><p>+91-9657657392<p>
+</div>
+<form> //not allowed
+</form>
+);
+
+=======================================================================
+how html is used in js?
+react uses jsx(javascript and xml) syntax
+ ==>jsx enables a developers to write javascript code along with html code.
+======================================================
+Virtual Dom
+
+==>Whenever page is loaded in the browser,dom is created for that page.
+==>one more layer is added to actual dom 
+==>react js will create  A DOM for itself on top of actual dom called as virtual dom.it performs all the operations on this virtual dom only.
+==>virtual dom is faster and efficient as compared to actual dom.
+why virtual dom?
+reconsilation
+==============================================
+both types of component are having 1 feature i.e props.
+<p align="">
+==>one component means our own tags which will have own properties as attributes.
+==>as html elements is having attributes,similarly a react component will have props.
+==>its the developer who will create props.
+tags and its attribute
+component and its attribute(props)
+================================================================================
+
+ex:Header component contain 1 title and desciption
+when any component cant decide by its own which content to be display in that case we will use props. dynamically we have to pass values using props.
+
+Header.js
+import {Component} from "react";
+export class Header extends Component 
+{
+	//override the function render(), will provide html code for the component
+	render(){
+	return (
+			<div>
+			<h1>Heading title</h1> 
+			<p>this is dummy description</p>
+		</div>
+);
+}
+}
+==>Display header component on each and every component
+==>we are having same header component in home,about,contact.
+==>Header cant decide by his own what to display.
+=============================================================================
+import {Component} from "react";
+import { Header } from "./Header";
+export class Home extends Component
+{
+	//override the function render(), will provide html code for the component
+	render(){
+	return (<div>
+        <Header title="home tile" description="this is home component"/>
+
+		<h1>welcome to home component</h1>
+		</div>
+
+
+
+);
+}
+}
+
+
+//how to read props in class(header) component
+==>react js will create an object for all the props that are passed..
+==>react will create an object contains 2 key value pair of an props and it will send this object in a class/Header component. in class/Header components props object will be assigned into an instance property and that instance property name as props.
+this.props  
+==>in class component props will be assigned to a instance property named as props.
+{
+title:home title",
+description:"this is home component"
+}
+
+Header.js
+import {Component} from "react";
+export class Header extends Component 
+{
+	//override the function render(), will provide html code for the component
+	render(){
+	return (
+			<div>
+			<h1>{this.props.title}</h1> 
+			<p>{this.props.description}</p>
+		</div>
+);
+}
+}
+
+
+============================================================
+====================================================================================
+
+==>component cant change/update the value of its props.
+==>Header is having 2 props title and description.in header.js file we cant update/change title and description props
+==>Every component is having a property that can be updated/change from inside of the component.i.e state
+ex:scoreboard component
+==>component cant initialise its props and cant change.component can only read the value of props.
+==>state in class component: 
+class ScoreBoard extends Component{
+	constructor()
+	{
+		this.state={ };//json object contains key and value pair
+	}
+}
+//component contains any number of states.
+//state can be change
+
+ScoreBoard.js
+
+import {Component} form "react";
+export class ScoreBoard extends Component{
+constructor() //constructor is used to initialized the state
+{
+	super();
+	this.state={
+				score:0
+			}
+	}
+	render()// used to return user interface
+	{
+		return(
+		<div>
+			<h1>{this.state.score}</h1> //value of state will be decided by component dynamically
+			<button>+</button>
+			<button>-</button>
+		</div>
+
+	);
+}
+}
+
+===================================
+import logo from './logo.svg';
+import './App.css';
+import { ScoreBoard } from './ScoreBoard';
+function App() {
+  return(
+    <div>
+       <ScoreBoard/>
+    </div>
+    );
+    
+    
+}
+
+export default App;
+======================================================================
+==>Now we need to handle click event. onClick will be props
+
+import {Component} form "react";
+export class ScoreBoard extends Component{
+constructor() //constructor is used to initialized the state
+{
+	super();
+	this.state={
+				score:0
+			}
+	}
+	incrementScore(){
+	alert("+ clicked");
+	
+	}
+	
+	render()// used to return user interface
+	{
+		return(
+		<div>
+			<h1>{this.state.score}</h1> //value of state will be decided by component dynamically
+			<button onClick={this.incrementScore}>+</button> 
+			<button>-</button>
+		</div>
+
+	);
+}
+}
+
+//// only mentioned on onclick which function we have to execute,function will be call internally as soon as button is click. in react js,to handle the events we only need to pass reference of the function.
+===============================================================
+==>As soon as the state of the component gets change,render() will be call automatically.
+==>whenerver state gets updated/modified,at the same time component will be re-rendered, so that it can display updated data.
+==>to update the state of the class component we will call setState() of component class.
+so that it will again call render() again.
+ex: this.setState({});
+
+import {Component} from "react";
+export class ScoreBoard extends Component{
+constructor() //constructor is used to initialized the state
+{
+	super();
+	this.state={
+				score:0
+			}
+        this.incrementScore=this.incrementScore.bind(this);
+	}
+
+	incrementScore(){
+	this.setState({score:this.state.score+4});	
+	}
+	
+	render()// used to return user interface
+	{
+		return(
+		<div>
+			<h1>{this.state.score}</h1> //value of state will be decided by component dynamically
+			<button onClick={this.incrementScore}>+</button> 
+
+			<button>-</button>
+		</div>
+
+	);
+}
+}
+
+
+
+===========================================================================
+
+
+
+
+
+

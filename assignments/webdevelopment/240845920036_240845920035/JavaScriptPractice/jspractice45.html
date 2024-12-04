@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac45</title>
+</head>
+<body> 
+    <h3>Array Methods</h3>
+    <input type="text" id = "tx" placeholder="Enter any Number" > <br>
+    <button onclick="addelement()">Add Element</button> &nbsp; &nbsp;
+    <button onclick="displayelement()">Display Element</button> <br>
+     <span>Array Elements are:</span> <br>
+     <output id="out"></output>
+   <script>
+        const arr = [];
+        function addelement()
+        {
+             if(tx.value.trim()!=="")
+             {
+                arr.push(tx.value);
+             }    
+             tx.value="";
+         }    
+        function displayelement()
+        {
+            out.value = arr;
+            //document.write(`The elements are ${arr}<br/>`);
+        }
+        
+    </script>
+
+    
+    
+</body>
+</html>

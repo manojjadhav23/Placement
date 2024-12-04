@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm01</title>
+</head>
+<body>
+    <script>
+        //The following following property i.e,title displays the 
+        // of the current html document
+        document.write(`${document.title}<br/>`);
+        
+        // Changing the title html document
+        document.title=`title changed`;
+        document.write(`${document.title}<br/>`);
+        
+        //this property represents url of current web page
+        document.write(`${document.URL}<br/>`);
+      
+        //this property represents the "head" section of 
+      //current working/viewing web page in browser window.
+        document.write(`${document.head}<br/>`);
+         
+        //Another Method to display the head section using the 
+        //head property
+        h = document.head;
+        document.write(`${h}<br/>`);  
+
+      // Displaying the body section of the current working html document
+      const b = document.body;
+      document.write(`${b}<br/>`);
+      // Another method to display the body element
+      document.write(`${document.body}<br/>`) 
+    
+      //Displaying all "images" of current web page, as an array format.
+      const i = document.images;
+      document.write(`${i}<br/>`);
+
+      //Another way of displaying all images of current web page.
+      document.write(`${document.images}<br/>`);
+    
+    // Displaying all the hyperlinks in the current webpage <a> tags as an 
+    // array format.
+    const l = document.links;
+    document.write(`${l}<br/>`);
+
+    //Displaying the hyperlinks in another way
+    document.write(`${document.links}<br/>`);
+    
+    // Displaying the forms in the webpage
+    const f = document.forms;
+    document.write(`${f}<br/>`);
+
+    // Displaying the forms in another way
+    document.write(`${document.forms}<br/>`);
+    </script>
+</body>
+</html>

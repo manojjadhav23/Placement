@@ -1,0 +1,23 @@
+<!--Splice method() in javascript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac43</title>
+</head>
+<body>
+    <script>
+        const arr = [10,20,30,40,50,60,70];
+        document.write(`The original array: ${arr}<br/>`);
+        // applying splice function
+        arr.splice(1,2);
+        document.write(`The spliced array is: ${arr}<br>`);
+        let temp = arr.splice(1,3);
+        document.write(`The Second time spliced array is: ${arr}<br/>`);
+        document.write(`The value of temp is: ${temp}<br/>`);
+        //Updation of array
+        arr.splice(2,3,  100,200,300);
+        document.write(`The updated array is: ${arr}<br/>`);
+    
+    </script>
+</body>
+</html>

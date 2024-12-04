@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <input type="button" value="CLICK" onclick="onsub()">
+
+</body>
+<script>
+    function onsub(){
+    
+    const xhr= new XMLHttpRequest();
+    xhr.open("GET","https://jsonplaceholder.typicode.com/users");
+    
+    xhr.send();
+
+    xhr.onreadystatechange=()=>{
+        console.log("state changed: ",xhr.readyState);
+        if(xhr.readyState == 4 && xhr.status){
+            console.log(xhr.responseText);
+            const x = JSON.parse(xhr.responseText);
+            console.log(x);
+            const y = JSON.parse(x[4].responseText)
+        
+            console.log(JSON.parse(JSON.stringify(x[0].address)));
+        }
+    }
+    }
+</script>
+
+</html>

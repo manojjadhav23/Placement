@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css">
+</head>
+<body>
+    <div allign="center">
+        <table>
+            <tr>
+                <th colspan="4"><input type="text" id="display" disabled></th>
+            </tr>
+            <tr>
+                <th><button onclick="clearDisplay()">⌫</button></th> 
+                <th><button onclick="appendToDisplay('/')">/</button></th> 
+                <th><button onclick="appendToDisplay('*')">*</button></th> 
+                <th><button onclick="appendToDisplay('-')">-</button></th>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('7')">7</button></td> 
+                <td><button onclick="appendToDisplay('8')">8</button></td> 
+                <td><button onclick="appendToDisplay('9')">9</button></td> 
+                <th><button onclick="appendToDisplay('+')">+</button></th>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('4')">4</button></td> 
+                <td><button onclick="appendToDisplay('5')">5</button></td> 
+                <td><button onclick="appendToDisplay('6')">6</button></td>
+                <th><button onclick="appendToDisplay('%')">% </button></th> 
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('1')">1</button></td> 
+                <td><button onclick="appendToDisplay('2')">2</button></td> 
+                <td><button onclick="appendToDisplay('3')">3</button></td> 
+                <th><button onclick="appendToDisplay('^2')">x<sup style="font-size: 10px;">2</sup></button></th>
+            </tr>
+            <tr>
+                <!-- <th><button onclick="calculateResult()">=</button></th> -->
+                <td colspan="2"><button onclick="appendToDisplay('0')">0</button></td> 
+                <th><button onclick="appendToDisplay('.')">.</button></th> 
+                <th><button onclick="calculateResult()" style="background-color: #00e836;">=</button></th>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        function appendToDisplay(value) {
+            const display = document.getElementById('display');
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            const display = document.getElementById('display');
+            display.value = '';
+        }
+
+        function calculateResult() {
+            const display = document.getElementById('display');
+            try {
+                // Simple evaluation of the expression
+                display.value = eval(display.value.replace('^2', '**2')); // Handle square
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

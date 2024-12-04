@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac41</title>
+</head>
+<body>
+    <script>
+        const arr = [];
+        arr.push(100);
+        arr.push(200);
+        arr.push(300);
+        let c = arr.push(400);
+        document.write(`The entire array is: ${arr}<br/>`);
+        document.write(`${c}<br/>`);
+        let y = arr.pop();
+        document.write(`First pop: ${y}<br/>`);
+        document.write(`Second pop: ${arr.pop()}<br/>`);
+        document.write(`The elements of arr are: ${arr} <br/>`);
+        arr.push(11,22,33,44);
+        document.write(`The Elements of the array are: ${arr}`,`&nbsp;`);
+    </script>
+</body>
+</html>

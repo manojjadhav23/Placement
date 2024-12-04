@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac10</title>
+</head>
+<body>
+    <script>
+   var a = 10;
+   document.write(a);
+   a = true;
+   document.write(a);
+   a="Nikhil";
+   document.write(a);
+   //let a=false;  // Redefinition of a using let keyword is not allowed 
+   //document.write(a);
+</script>
+ <script>
+      x = 10;
+     document.write(x);
+     x=true;
+     document.write(x);
+     // let x;   //This line produces error because the browser cannot access 
+     // the vartiable x before initialization. 
+     // hoisting is not supported in let   
+    </script>
+<script>
+    y=20;
+    document.write(y);
+    document.write(y*5);
+    var y; // var is hoisting , so this line does not produce error.
+     </script>
+
+</body>
+</html>

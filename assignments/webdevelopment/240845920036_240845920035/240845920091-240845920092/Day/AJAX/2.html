@@ -1,0 +1,50 @@
+<!-- New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX-2</title>
+    <style>
+        h1 {
+
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="abc">
+    </div>
+
+    <input type="button" value="A" onclick="fetchdata()">
+
+    <script>
+        function fetchdata() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+            xhr.send();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    //  console.log(xhr.responseText);//get json object in text format
+                    const data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    
+                    const obj = document.getElementById("abc");
+                    
+                    for (i = 0; i < data.length; i++) {
+                        //type of tag
+                        const para = document.createElement("h1");
+
+                        para.innerHTML = data[i].id + "  " + data[i].name;
+                        // by id
+                        //abc.appendChild(para);
+                        // by objk
+                        obj.appendChild(para);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

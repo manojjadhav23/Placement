@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm14</title>
+</head>
+<body>
+    <div id="div1">
+        <h1>Julius Ceaser</h1>
+        <span>Gaius Pompeus Magnus</span>
+        <p>Gaius Tulius Ceciro</p>
+        <button onclick="document.querySelector('h1').remove()">Remove Element</button>
+         <br>
+      </div>
+       <hr>
+       <div id="div2">
+        <button id="bt2">Add to cart</button>
+       </div>
+    <script>
+        document.querySelector("#bt2").onclick=function()
+        { 
+             //Creating image object
+            const img = document.createElement("img");
+            img.src="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiD1-r1z-qIAxVxXg8CHampC0AYABAKGgJ0Yg&co=1&ase=2&gclid=Cj0KCQjwmOm3BhC8ARIsAOSbapX3S53AYw8jCwLaXEuXgn1maGUVkaafP7h8D67G1MCXqsgKX42XUQAaAjJDEALw_wcB&ohost=www.google.com&cid=CAESVuD2poUL5senSPUGAAxZUPYkf6jZa2Pr5tSOC9opEtIxSHa8UhbQVzUVYIINL7OROPfJmyEqZwnD2lufaeNUhoP_ehXsWGby_YBhwDKgBXnA47Ev4CXu&sig=AOD64_0GGLfwdrm7uMyc6Mu6VC_SQv4fzg&ctype=5&q=&nis=4&ved=2ahUKEwjgt-X1z-qIAxWbh68BHV9UBIUQwg8oAXoECAQQFQ&adurl=";
+            img.width="150px";
+            img.height="200px";
+           
+            // Creating heading object
+            const head = document.createElement("h3");
+            head.innerText="Samsung 653L, 3 Star, Frost Free, Double Door";
+
+            // Creating div object 
+            const div = document.createElement("div");
+            div.innerHTML="Limited Time Deal<strong>&#8377;79999</strong> <br/> M.R.P: <del>&#8377;113000</del>";
+           
+          // Creating button object
+          const bt = document.createElement("button");
+          bt.innerText="Delete Item";
+          bt.onclick=()=>document.querySelector("#product").remove();
+        
+          //Creating container for div object
+          const container = document.createElement("div");
+          container.id="product";
+          container.appendChild(img);
+          container.appendChild(head);
+          container.appendChild(div);
+          container.appendChild(bt);
+          container.style.width="270px";
+          container.style.padding="10px";
+          container.style.boxShadow="0px 0px 10px black";
+          container.style.textAlign="left";
+          container.style.borderRadius="15px";
+          container.style.margin="10px";
+          container.style.display="inline-block";
+        
+          //Adding container to body
+          document.body.appendChild(container);
+        }   
+    </script>
+    
+    </body>
+

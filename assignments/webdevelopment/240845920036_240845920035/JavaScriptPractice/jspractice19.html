@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jsprac19</title>
+</head>
+<style>
+    input{
+       text-align:center;
+    }
+       </style>
+<body>
+<div align="center">
+<h2>Temperature Convertor</h2>
+<input type="text" name="celcius" id="cel" placeholder="celcius" oninput="fahr.value=cel.value*9/5+32">
+<h2 style="display:inline-block;">=</h2>
+<input type="text" name="Fahrenheit" id="fahr" placeholder="Fahrenheit" oninput="cel.value=(fahr.value-32)*5/9">
+</div>    
+</body>
+</html>

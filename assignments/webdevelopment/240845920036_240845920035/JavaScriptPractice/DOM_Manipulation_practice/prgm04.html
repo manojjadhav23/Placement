@@ -1,0 +1,31 @@
+<!--Query Selector and Query selector all-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm04</title> 
+<style>
+#heading
+{
+   color: #ff0000;
+} 
+.c1
+{
+    color: blue;
+}
+</style>
+</head>
+<body>
+    <h3 id="heading">Apple</h3>
+    <h3 class="c1">Banana</h3>
+    <div class="c1">Orange</div> 
+    <label class="c1">Mango</label> <br>
+    <hr>
+    <script>
+        let rob = document.querySelector("#heading");
+        document.write(`${rob}<br/>`);
+
+        let bob = document.querySelectorAll(".c1");
+        document.write(`${bob}<br/>`);
+    </script>
+</body>
+</html>

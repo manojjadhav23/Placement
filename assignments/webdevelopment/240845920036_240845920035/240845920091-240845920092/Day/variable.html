@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <h1>CHECK THE CONSOLE</h1>
+    <script>
+        a=10;
+        function show(){
+            console.log("Value of a iin show func is " +a);
+        }
+        show();
+        console.log("Value of a is " +a);
+
+        var b=20;
+        function showv(){
+            console.log("Value of b in show func is " +b);
+        }
+        showv();
+        console.log("Value of b is " +b);
+
+        function show(){
+            var b1=25
+            console.log("Value of b1 which is intialized show func is " +b1);
+        }
+        show();
+        /*console.log("Value of b1 is " +b1);*/ // var is now inside a function and can't access outside the funct
+
+        let c=30;
+        function showl(){
+            console.log("Value of c in show func is " +c);
+        }
+        showl();
+        console.log("Value of c is " +c);
+
+        function showl(){
+            let c1=30;
+            console.log("Value of c1 which is intialized show func is " +c1);
+        }
+        showl();
+        // console.log("Value of c1 is " +c1);
+
+        const pie = 3.142;
+        function view(){
+            console.log("Pie is const inside the view function " +pie);
+        }
+        view();
+        console.log("Pie is const " +pie);
+
+
+        function view_const(){
+            const piex = 3.142
+            console.log("Value of piex which is intialized vie_const func is " +piex);
+        }
+        view_const();
+        /*console.log("Value of piex is " +piex);*/
+
+        
+/*
+        var a=100;
+        document.writeln(a);
+        var a="apple";	//re-defination
+        document.writeln(a);
+        // let a=true;	//error(not supported)
+        var a=true;	//re-defination
+        document.writeln(a);	  
+        
+        var n=100;
+        document.writeln(n);
+        document.writeln(n*15);
+        //var n; //its hoisting
+        let n;	//error(not supported)
+        x="ram";
+        document.writeln(x);	  
+        var x;  //its hoisting */
+
+    </script>
+</body>
+</html>

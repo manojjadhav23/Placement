@@ -1,0 +1,123 @@
+<!--Element Object properties-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prgm11</title>
+</head>
+<body>
+    <textarea name="ta" id="ta" rows="8" cols="40"></textarea> <br>
+<button id="bold"><strong>B</strong></button> &nbsp;
+<button id="italic"><em>I</em></button> &nbsp;
+<button id="underline"><u>U</u></button> &nbsp;
+<button id="strike"><s>S</s></button> &nbsp;
+<input type="color" name="col" id="col"> &nbsp;
+<button id="left">Left</button> &nbsp;
+<button id="Right">Right</button> &nbsp;
+<button id="center">Center</button> &nbsp;
+<select name="se" id="fs"></select>
+<!-- Script to generate font sizes using array -->
+<script> 
+const ta = document.getElementById("ta");
+const fsSelect = document.getElementById("fs");
+for(let size = 14; size<=30 ; size = size +2)
+{
+    const option = document.createElement("option");
+    option.value = size;
+    option.textContent = size;
+    fsSelect.appendChild(option);
+} 
+</script> 
+<!-- Script to generate Bold text  -->
+<script>
+document.querySelector("#bold").onclick=function()
+{ 
+    const computedStyle = window.getComputedStyle(ta);
+    if(computedStyle.fontWeight=="bold")
+{
+    ta.style.fontWeight="normal";
+}
+else{
+    ta.style.fontWeight="bold";
+}
+}
+</script> 
+
+<!-- Script to generate Italic text  -->
+<script>
+document.querySelector("#italic").onclick=function()
+{
+    if(ta.style.fontStyle=="normal")
+{
+    ta.style.fontStyle="italic";
+} 
+else
+{
+  ta.style.fontStyle="normal";
+}
+}
+</script>
+<!-- Script to generate Underline Text -->
+<script>
+    document.querySelector("#underline").onclick=function()
+    { 
+        if(ta.style.textDecoration=="underline")
+         {
+            ta.style.textDecoration="none";
+         } 
+      else
+      {
+        ta.style.textDecoration="underline";
+      }
+}
+</script> 
+<!-- Script to generate Strikeout code   -->
+<script>
+    document.querySelector("#strike").onclick=function()
+    {
+        if(ta.style.textDecoration=="line-through")
+    {
+        ta.style.textDecoration="none";
+    }
+    else
+    {
+        ta.style.textDecoration="line-through";
+    }
+    }
+</script>
+<!-- Script to give desired color to the text  -->
+<script>
+    document.querySelector("#col").onchange=function()
+    {
+         ta.style.color=this.value;
+    }
+</script>
+<!-- Script to make the text left-justified -->
+<script>
+document.querySelector("#left").onclick=function()
+{
+    ta.style.textAlign="left";
+}
+</script>
+<!-- Script to make the text center-justified -->
+<script>
+document.querySelector("#center").onclick=function()
+{
+    ta.style.textAlign="center";
+}
+</script>
+<!-- Script to make the text right-justified -->
+<script>
+document.querySelector("#Right").onclick=function()
+{
+    ta.style.textAlign="right";
+}
+</script>
+<!-- Script to change font-size of the text -->
+<script>
+    document.querySelector("#fs").onchange=function()
+    {
+        ta.style.fontSize=`${this.value}px`;
+    }
+</script>
+</body>
+</html>
